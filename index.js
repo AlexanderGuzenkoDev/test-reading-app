@@ -12,15 +12,14 @@ speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 recognition.continuous = true;
 recognition.lang = 'en-US';
-recognition.interimResults = false;
-recognition.maxAlternatives = 1;
+recognition.interimResults = true;
+recognition.maxAlternatives = 10;
 
 function start () {
     recognition.start();
 }
 
 recognition.onresult = (event) => {
-    console.log('--- ', event.results);
     const result = event.results[0][0].transcript;
 
     console.log(result);
