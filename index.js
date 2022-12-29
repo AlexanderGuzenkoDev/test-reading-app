@@ -38,3 +38,7 @@ recognition.onerror = function(event) {
 recognition.onsoundend = (event) => {
     console.log('Sound has stopped being received');
   }
+
+  recognition.onspeechend = () => {
+    console.log('Speech has stopped being detected');
+  }
