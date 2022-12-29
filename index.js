@@ -42,3 +42,7 @@ recognition.onsoundend = (event) => {
   recognition.onspeechend = () => {
     console.log('Speech has stopped being detected');
   }
+
+  recognition.onaudioend = () => {
+    console.log('Audio capturing ended');
+  }
