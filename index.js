@@ -26,6 +26,11 @@ recognition.onresult = (event) => {
     console.log(result);
 }
 
+recognition.onnomatch = (event) => {
+    console.log(event)
+
+}
+
 recognition.onerror = function(event) {
     console.log(event.error);
 }
