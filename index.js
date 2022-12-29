@@ -34,3 +34,7 @@ recognition.onnomatch = (event) => {
 recognition.onerror = function(event) {
     console.log(event.error);
 }
+
+recognition.onsoundend = (event) => {
+    console.log('Sound has stopped being received');
+  }
