@@ -13,7 +13,7 @@ recognition.grammars = speechRecognitionList;
 recognition.continuous = true;
 recognition.lang = 'en-US';
 // recognition.interimResults = true;
-// recognition.maxAlternatives = 10;
+recognition.maxAlternatives = 1;
 
 function start () {
     recognition.start();
