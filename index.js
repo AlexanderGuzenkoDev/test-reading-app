@@ -12,7 +12,7 @@ speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 recognition.continuous = true;
 recognition.lang = 'en-US';
-// recognition.interimResults = true;
+recognition.interimResults = true;
 recognition.maxAlternatives = 1;
 
 function start () {
