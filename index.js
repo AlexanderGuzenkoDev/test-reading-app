@@ -10,7 +10,7 @@ const speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 
 recognition.grammars = speechRecognitionList;
-recognition.continuous = false;
+recognition.continuous = true;
 recognition.lang = 'en-US';
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
@@ -20,6 +20,7 @@ function start () {
 }
 
 recognition.onresult = (event) => {
+    console.log('--- ', event.results);
     const result = event.results[0][0].transcript;
 
     console.log(result);
