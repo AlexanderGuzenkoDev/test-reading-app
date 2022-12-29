@@ -20,7 +20,8 @@ function start () {
 }
 
 recognition.onresult = (event) => {
-    const result = event.results.pop()[0].transcript;
+    const length = event.results.length;
+    const result = event.results[length - 1][0].transcript;
 
     console.log(result);
 }
